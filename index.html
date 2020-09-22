@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Savings calculator</title>
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<h1>Morgan Stanley Reserved Living & Giving Savings Calculator</h1>
+<div class="savings-calculator">
+    <div class="calculator-wrap">
+        <div class="calculator-col-left">
+            <div class="calculator-data-row">
+                <div class="data-heading">
+                    <h2 class="data-heading-title">Buying a Car</h2>
+                    <div class="data-amount">
+                        <span class="data-amount-label">Annual Spend</span>
+                        <div class="data-ammount-input">
+                            <span class="dollar-icn">$</span>
+                            <input type="text" class="form-control" align="right" id="car_buying">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-control">
+                    <div type="text" class="sc-slider" id="car_buying_slider"></div>
+                    <span class="data-control-from">$0</span>
+                    <span class="data-control-to">$200,000</span>
+
+
+                </div>
+            </div>
+            <div class="calculator-data-row">
+                <div class="data-heading">
+                    <h2 class="data-heading-title">Travel & Leisure</h2>
+                    <div class="data-amount">
+                        <span class="data-amount-label">Annual Spend</span>
+                        <div class="data-ammount-input">
+                            <span class="dollar-icn">$</span>
+                            <input type="text" class="form-control" align="right" id="travel_leisure_field">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-control">
+                    <div type="text" class="sc-slider" id="travel_leisure"></div>
+                    <span class="data-control-from">$0</span>
+                    <span class="data-control-to">$100,000</span>
+
+
+                </div>
+            </div>
+            <div class="calculator-data-row">
+                <div class="data-heading">
+                    <h2 class="data-heading-title">Services & Entertainment</h2>
+                    <div class="data-amount">
+                        <span class="data-amount-label">Annual Spend</span>
+                        <div class="data-ammount-input">
+                            <span class="dollar-icn">$</span>
+                            <input type="text" class="form-control" align="right" id="service_entertainment_field">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-control">
+                    <div type="text" class="sc-slider" id="service_entertainment"></div>
+                    <span class="data-control-from">$0</span>
+                    <span class="data-control-to">$100,000</span>
+
+
+                </div>
+            </div>
+            <div class="calculator-data-row">
+                <div class="data-heading">
+                    <h2 class="data-heading-title">Health & Wellness</h2>
+                    <div class="data-amount">
+                        <span class="data-amount-label">Annual Spend</span>
+                        <div class="data-ammount-input">
+                            <span class="dollar-icn">$</span>
+                            <input type="text" class="form-control" align="right" id="health_wellness_field">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-control">
+                    <div type="text" class="sc-slider" id="health_wellness"></div>
+                    <span class="data-control-from">$0</span>
+                    <span class="data-control-to">$100,000</span>
+
+
+                </div>
+            </div>
+            <div class="calculator-data-row">
+                <div class="data-heading">
+                    <h2 class="data-heading-title">Retail & Gifts</h2>
+                    <div class="data-amount">
+                        <span class="data-amount-label">Annual Spend</span>
+                        <div class="data-ammount-input">
+                            <span class="dollar-icn">$</span>
+                            <input type="text" class="form-control" align="right" id="retail_gifts_field">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-control">
+                    <div type="text" class="sc-slider" id="retail_gifts"></div>
+                    <span class="data-control-from">$0</span>
+                    <span class="data-control-to">$100,000</span>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="calculator-col-right">
+            <div class="calculator-summary-wrap">
+                <div class="calc-summary-head">
+                    <h2>Annual Savings</h2>
+                </div>
+                <div class="calc-summary-body">
+                    <p class="calc-summary-text">Based on an annual spend <span class="calc-total-spent">$260,500</span> you may save approximately</p>
+                    <div class="calc-total-sum">
+                        $26,050
+                    </div>
+                    <p class="calc-summary-text">by utilizing our Morgan Stanley Reserved Living & Giving program benefits.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
