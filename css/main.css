@@ -9,7 +9,8 @@
   font-style: normal; }
 
 .savings-calculator {
-  max-width: 1192px; }
+  margin: 0;
+  padding: 0; }
   .savings-calculator .calculator-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19,6 +20,8 @@
     background-color: #f7f7f7;
     width: 100%;
     padding: 18px; }
+    .savings-calculator .calculator-wrap .noUi-tooltip {
+      display: none; }
     .savings-calculator .calculator-wrap .calculator-data-row {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -190,7 +193,7 @@
       flex-direction: column; }
     .savings-calculator .calculator-wrap .calculator-col-right {
       background-color: #ffffff;
-      width: 38px;
+      width: 38%;
       margin-left: 18px;
       -webkit-box-flex: 5;
       -ms-flex-positive: 5;
@@ -199,3 +202,38 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
+
+@media screen and (max-width: 952px) {
+  .savings-calculator .calculator-wrap .calculator-col-right, .savings-calculator .calculator-wrap .calculator-col-left {
+    width: 100%;
+    margin: 0; }
+  .savings-calculator .calculator-wrap .calculator-col-right {
+    padding-bottom: 50px; } }
+
+@media screen and (max-width: 768px) {
+  .savings-calculator .calculator-wrap .calculator-data-row .data-heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .savings-calculator .calculator-wrap .calculator-data-row .data-heading .data-amount {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .savings-calculator .calculator-wrap .calculator-summary-wrap .calc-summary-body .calc-summary-text {
+    padding: 0 30px; } }
+
+@media screen and (max-width: 495px) {
+  .savings-calculator .calculator-wrap .calculator-data-row .data-heading {
+    text-align: center; }
+    .savings-calculator .calculator-wrap .calculator-data-row .data-heading .data-amount {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .savings-calculator .calculator-wrap .calculator-data-row .data-heading .data-amount .data-ammount-input {
+        margin-left: 0; }
+        .savings-calculator .calculator-wrap .calculator-data-row .data-heading .data-amount .data-ammount-input input {
+          width: 100%; }
+      .savings-calculator .calculator-wrap .calculator-data-row .data-heading .data-amount .data-amount-label {
+        padding-bottom: 10px; } }

@@ -10,13 +10,16 @@
 
 
 .savings-calculator
-  max-width: 1192px
+  margin: 0
+  padding: 0
   .calculator-wrap
     display: flex
     flex-wrap: wrap
     background-color: #f7f7f7
     width: 100%
     padding: 18px
+    .noUi-tooltip
+      display: none
     .calculator-data-row
       display: flex
       flex-direction: column
@@ -170,8 +173,9 @@
       flex-direction: column
     .calculator-col-right
       background-color: #ffffff
-      width: 38px
+      width: 38%
       margin-left: 18px
       flex-grow: 5
       flex-direction: column
 
+@import "responsive"

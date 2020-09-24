@@ -3,6 +3,7 @@ var carSlider = document.getElementById('car_buying_slider');
 
 noUiSlider.create(carSlider, {
     start: 50000,
+    tooltips: [true],
     connect: 'lower',
     range: {
         'min': 0,
@@ -15,6 +16,14 @@ noUiSlider.create(carSlider, {
     }),
     step: 500,
 
+});
+
+carSlider.noUiSlider.on('start', function () { 
+    $('#car_buying').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeIn();
+});
+
+carSlider.noUiSlider.on('end', function () { 
+    $('#car_buying').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeOut();
 });
 
 var directionField = $('#car_buying');
@@ -38,6 +47,7 @@ var travelSlider = document.getElementById('travel_leisure');
 noUiSlider.create(travelSlider, {
     start: 10000,
     connect: 'lower',
+    tooltips: [true],
     range: {
         'min': 0,
         'max': 100000
@@ -49,6 +59,14 @@ noUiSlider.create(travelSlider, {
     }),
     step: 500,
 
+});
+
+travelSlider.noUiSlider.on('start', function () { 
+    $('#travel_leisure_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeIn();
+});
+
+travelSlider.noUiSlider.on('end', function () { 
+    $('#travel_leisure_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeOut();
 });
 
 var travel_directionField = $('#travel_leisure_field');
@@ -71,6 +89,7 @@ var serviceSlider = document.getElementById('service_entertainment');
 noUiSlider.create(serviceSlider, {
     start: 10000,
     connect: 'lower',
+    tooltips: [true],
     range: {
         'min': 0,
         'max': 100000
@@ -82,6 +101,15 @@ noUiSlider.create(serviceSlider, {
     }),
     step: 500,
 
+});
+
+
+serviceSlider.noUiSlider.on('start', function () { 
+    $('#service_entertainment_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeIn();
+});
+
+serviceSlider.noUiSlider.on('end', function () { 
+    $('#service_entertainment_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeOut();
 });
 
 var service_directionField = $('#service_entertainment_field');
@@ -104,6 +132,7 @@ var healthSlider = document.getElementById('health_wellness');
 noUiSlider.create(healthSlider, {
     start: 10000,
     connect: 'lower',
+    tooltips: [true],
     range: {
         'min': 0,
         'max': 100000
@@ -115,6 +144,14 @@ noUiSlider.create(healthSlider, {
     }),
     step: 500,
 
+});
+
+healthSlider.noUiSlider.on('start', function () { 
+    $('#health_wellness_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeIn();
+});
+
+healthSlider.noUiSlider.on('end', function () { 
+    $('#health_wellness_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeOut();
 });
 
 var health_directionField = $('#health_wellness_field');
@@ -137,6 +174,7 @@ var retailSlider = document.getElementById('retail_gifts');
 noUiSlider.create(retailSlider, {
     start: 10000,
     connect: 'lower',
+    tooltips: [true],
     range: {
         'min': 0,
         'max': 100000
@@ -148,6 +186,14 @@ noUiSlider.create(retailSlider, {
     }),
     step: 500,
 
+});
+
+retailSlider.noUiSlider.on('start', function () { 
+    $('#retail_gifts_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeIn();
+});
+
+retailSlider.noUiSlider.on('end', function () { 
+    $('#retail_gifts_field').closest('.calculator-data-row').find(".noUi-tooltip" ).fadeOut();
 });
 
 var retail_directionField = $('#retail_gifts_field');
@@ -173,7 +219,7 @@ function updateTotals(){
             sum+=parseFloat($( this ).val().replace(/,/g, ''));
 
         });
-    console.log(parseFloat('50,500',3));
+   
         $('.savings-calculator .calc-total-spent').html("$"+numberWithCommas(sum));
 
         var car_total= parseFloat($('#car_buying').val().replace(/,/g, ''));
@@ -204,10 +250,12 @@ function updateTotals(){
 }
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 $(document).ready(function(){
+
+ 
 
 });
 
