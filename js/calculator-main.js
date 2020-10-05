@@ -14,7 +14,9 @@ noUiSlider.create(carSlider, {
         thousand: ','
 
     }),
+    snap: false,
     step: 500,
+    
 
 });
 
@@ -29,16 +31,23 @@ carSlider.noUiSlider.on('end', function () {
 var directionField = $('#car_buying');
 
 carSlider.noUiSlider.on('update', function (values, handle) {
+    
     directionField.val(values[handle]);
     updateTotals();
 });
 
+
+
+
 directionField.on('input', function () {
-if(this.value>0 && this.value<500) this.value=500;
-    carSlider.noUiSlider.set(this.value);
+ //if(this.value>0 && this.value<500) this.value=500;
+ console.log(this.value);
+    carSlider.noUiSlider.set(this.value,true,true);
 
     updateTotals();
 });
+
+
 /*********************___________________________________________________________********************/
 
 /*********************___________________ Travel Leisure_________________________********************/
@@ -78,7 +87,7 @@ travelSlider.noUiSlider.on('update', function (values, handle) {
 
 travel_directionField.on('input', function () {
 
-    travelSlider.noUiSlider.set(this.value);
+    travelSlider.noUiSlider.set(this.value,true,true);
     updateTotals();
 });
 /*********************___________________________________________________________********************/
@@ -121,7 +130,7 @@ serviceSlider.noUiSlider.on('update', function (values, handle) {
 
 service_directionField.on('input', function () {
 
-    serviceSlider.noUiSlider.set(this.value);
+    serviceSlider.noUiSlider.set(this.value,true,true);
     updateTotals();
 });
 /*********************___________________________________________________________********************/
@@ -163,7 +172,7 @@ healthSlider.noUiSlider.on('update', function (values, handle) {
 
 health_directionField.on('input', function () {
 
-    healthSlider.noUiSlider.set(this.value);
+    healthSlider.noUiSlider.set(this.value,true,true);
     updateTotals();
 });
 /*********************___________________________________________________________********************/
@@ -184,7 +193,7 @@ noUiSlider.create(retailSlider, {
         thousand: ','
 
     }),
-    step: 500,
+   step: 500,
 
 });
 
@@ -205,7 +214,7 @@ retailSlider.noUiSlider.on('update', function (values, handle) {
 
 retail_directionField.on('input', function () {
 
-    retailSlider.noUiSlider.set(this.value);
+    retailSlider.noUiSlider.set(this.value,true,true);
     updateTotals();
 });
 /*********************___________________________________________________________********************/
@@ -236,7 +245,7 @@ function updateTotals(){
         total+=(health/100 * 20);
         total+=(retail/100 * 15);
 
-        total= Number((total).toFixed(1))
+        total= Number((total).toFixed(0))
 
         total= numberWithCommas(total);
 
@@ -255,7 +264,7 @@ function numberWithCommas(x) {
 
 $(document).ready(function(){
 
- 
+    
 
 });
 

@@ -1,0 +1,78 @@
+@media screen and ( min-width: 1298px )
+    .savings-calculator      
+      .calculator-wrap                               
+          .calculator-col-right
+              width: 370px
+              max-width: 370px
+          .calculator-col-left
+              width: 768px
+              max-width: 768px
+
+
+@media screen and ( max-width: 1150px ) and ( min-width: 1015px )
+    .savings-calculator      
+      .calculator-wrap
+          .calculator-data-row
+              .data-heading
+                  flex-direction: column
+                  .data-heading-title
+                      padding-bottom: 10px
+                      margin-right: 0
+                  .data-amount
+                      justify-content: space-between
+
+
+@media screen and ( max-width: 1015px )
+    .savings-calculator      
+      .calculator-wrap          
+          .calculator-col-right, .calculator-col-left
+              width: 100%
+              margin: 0
+          .calculator-col-right
+              padding-bottom: 50px
+              border-top: none
+          .calculator-summary-wrap
+              .calc-summary-footer
+                  .calc-footer-text
+                      text-align: center
+                      padding-top: 60px    
+
+
+@media screen and ( max-width: 768px )
+    .savings-calculator      
+      .calculator-wrap
+          .calculator-col-right
+              min-width: auto
+          .noUi-tooltip
+              display: none!important
+          .calculator-data-row
+              .data-heading
+                  flex-direction: column
+                  .data-heading-title
+                      padding-bottom: 10px
+                      margin-right: 0
+                  .data-amount
+                      justify-content: space-between
+          .calculator-summary-wrap
+              .calc-summary-body
+                  .calc-summary-text
+                    padding: 0 30px               
+
+@media screen and ( max-width: 558px )
+    .savings-calculator      
+      .calculator-wrap
+          .calculator-data-row
+              .data-heading
+                  text-align: center    
+                  .data-heading-title        
+                      text-align: center 
+                      justify-content: center    
+                  .data-amount
+                      flex-direction: column 
+                      padding-bottom: 10px
+                      .data-ammount-input
+                          margin-left: 0
+                          input
+                              width: 100%
+                      .data-amount-label
+                          padding-bottom: 10px                     
